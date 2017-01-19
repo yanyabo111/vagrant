@@ -57,7 +57,7 @@ ssl_certificate_key_path: /etc/nginx/ssl/{{ server_name }}.key
 releases_path: '{{ path }}/releases'
 shared_path: '{{ path }}/shared'
 
-app_path: '{{ path }}/rails{{ "/current" if target != "virtualbox" else "" }}'
+app_path: '{{ path }}/ruby{{ "/current" if target != "virtualbox" else "" }}'
 app_public_path: "{{ app_path }}/public"
 app_config_path: '{{ app_path }}/config'
 shared_config_path: '{{ app_path if target == "virtualbox" else shared_path }}/config'
