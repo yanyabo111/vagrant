@@ -17,7 +17,7 @@ packages:
   - imagemagick
   - qt5-default
   - libqt5webkit5-dev
-manual_ruby_version: 
+manual_ruby_version:
 server_name: localhost
 rails_version: 5
 ruby_install: rvm
@@ -34,10 +34,10 @@ redis_orm: redis-rb
 mongodb_db_name: myapp
 mysql_db_name: analysis_dashboard
 mysql_db_user: vagrant
-mysql_db_password: 
+mysql_db_password:
 postgresql_db_name: myapp
 postgresql_db_user: vagrant
-postgresql_db_password: 
+postgresql_db_password:
 postgresql_extensions:
 delayed_job_command: script/delayed_job run
 sidekiq_command: sidekiq
@@ -57,7 +57,7 @@ ssl_certificate_key_path: /etc/nginx/ssl/{{ server_name }}.key
 releases_path: '{{ path }}/releases'
 shared_path: '{{ path }}/shared'
 
-app_path: '{{ path }}{{ "/current" if target != "virtualbox" else "" }}'
+app_path: '{{ path }}/rails{{ "/current" if target != "virtualbox" else "" }}'
 app_public_path: "{{ app_path }}/public"
 app_config_path: '{{ app_path }}/config'
 shared_config_path: '{{ app_path if target == "virtualbox" else shared_path }}/config'
