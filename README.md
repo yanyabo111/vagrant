@@ -3,8 +3,12 @@ Vagrant box
 ## Pre Work
 1. create `source/ruby/config/` folder first, to make unicorn work
 
+## Zsh Support
+- you can edit config file in `config/zsh/.zshrc`, it's a symbolic
+
 ## Emacs && Vim Config Support
-- config file in `/config/emacs.d`
+- for emacs, config file in `config/emacs.d`
+- for vim. .vim folder in `config/vim`, .vimrc file in `config/vim/.vimrc`
 - you can use `ln -s` to use this
 
 ## Fully Development Environment for Rails

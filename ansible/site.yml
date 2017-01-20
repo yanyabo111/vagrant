@@ -13,20 +13,38 @@
         update_cache: yes
         cache_valid_time: 3600
 
-- hosts: mysql
+# - hosts: mysql
+#   roles:
+#     - mysql
+
+# - hosts: redis
+#   roles:
+#     - redis
+
+
+# - hosts: application
+#   handlers:
+#   roles:
+#     - base
+#     - { role: ruby, tags: ruby }
+#     - vim
+#     - webserver
+
+- hosts: localhost
+  remote_user: root
+  vars:
+    __users__:
+      root:
+        zsh_prompt_install: Yes
+        zsh_prompt_name: pure
+        zsh_prompt_download_url: https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh
+        zsh_prompt_additional_url: https://raw.githubusercontent.com/sindresorhus/pure/master/async.zsh
+        zfunctions_directory: ./files/zfunctions
+        zshrc_content: |
+          alias ls='ls -lah'
   roles:
-    - mysql
+    - zsh
 
-- hosts: redis
+- hosts: all
   roles:
-    - redis
-
-
-- hosts: application
-  handlers:
-  roles:
-    - base
-    - { role: ruby, tags: ruby }
-    - vim
-    - webserver
-
+    - ohmyzsh
