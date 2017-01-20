@@ -1,8 +1,10 @@
 Vagrant box
 
-## full environment for rails development
-- use nginx and unicorn
-- use mysql
+## full development environment for rails
+- use nginx and unicorn as server
+    - create source/ruby/config/ folder fisrt, to make unicorn work
+- use mysql and redis as database
+
 - haml default support
 
 ## use host proxy to speed up network connection

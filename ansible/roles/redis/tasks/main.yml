@@ -12,7 +12,7 @@
   service: name=redis-server enabled=yes state=started
 
 - name: Configure redis-rb
-  template: src=redis.rb.j2 dest={{ app_config_path }}/initializers/redis.rb owner={{ user_name }} backup=yes
+  template: src=redis.rb.j2 dest={{ path }}/rais_redis.rb owner={{ user_name }} backup=yes
   when: redis_orm is defined and redis_orm == 'redis-rb'
  
 - name: Create upstart config

@@ -1,6 +1,6 @@
 ---
-vm_name: analysis_dashboard
-path: /analysis_dashboard
+vm_name: box
+path: /box
 git_branch: master
 vm_os: ubuntu/trusty64
 environments:
@@ -22,7 +22,7 @@ server_name: localhost
 rails_version: 5
 ruby_install: rvm
 ruby_version: 2.3.1
-environment_file: /analysis_dashboard/.envrc
+environment_file: /box/.envrc
 databases:
   - mysql
   - redis
@@ -32,7 +32,7 @@ mysql_orm: activerecord
 mongodb_orm: none
 redis_orm: redis-rb
 mongodb_db_name: myapp
-mysql_db_name: analysis_dashboard
+mysql_db_name: box
 mysql_db_user: vagrant
 mysql_db_password:
 postgresql_db_name: myapp
@@ -43,7 +43,7 @@ delayed_job_command: script/delayed_job run
 sidekiq_command: sidekiq
 resque_command: rake resque:work
 server_type: nginx_unicorn
-git_url: git@github.com:yingtu/analysis_dashboard.git
+git_url: git@github.com:yingtu/box.git
 
 app_name: '{{ vm_name }}'
 user_name: '{{ "vagrant" }}'
