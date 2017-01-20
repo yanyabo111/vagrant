@@ -25,7 +25,6 @@ rvm1_symlink_binaries:
 rvm1_symlink_to: '/usr/local/bin'
 rvm1_rubies:
   - "{{ rvm1_default_ruby_version }}"
-
 rvm1_install_gems:
   - rails
 
@@ -44,8 +43,5 @@ rvm1_symlink_bundler_binaries:
   - 'bundle'
   - 'bundler'
 
-# Name of UID 0 user
 root_user: 'root'
-
-# Name of GID 0 group -- BSD systems typically use wheel instead of root
 root_group: '{{ root_user }}'
