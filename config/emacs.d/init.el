@@ -36,3 +36,16 @@
 
 (setq url-gateway-method 'socks)
 (setq socks-server '("Default server" "127.0.0.1" 1086 5))
+
+(setq default-directory "~/vagrant")
+
+; key binding
+(setq mac-command-modifier 'control)
+(setq mac-control-modifier 'command)
+
+(projectile-global-mode)
+
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
