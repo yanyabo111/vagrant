@@ -13,22 +13,22 @@
         update_cache: yes
         cache_valid_time: 3600
 
-# - hosts: mysql
-#   roles:
-#     - mysql
+- hosts: mysql
+  roles:
+    - mysql
 
-# - hosts: redis
-#   roles:
-#     - redis
+- hosts: redis
+  roles:
+    - redis
 
 
-# - hosts: application
-#   handlers:
-#   roles:
-#     - base
-#     - { role: ruby, tags: ruby }
-#     - vim
-#     - webserver
+- hosts: application
+  handlers:
+  roles:
+    - base
+    - { role: ruby, tags: ruby }
+    - vim
+    - webserver
 
 - hosts: localhost
   remote_user: root
