@@ -21,6 +21,26 @@
   roles:
     - redis
 
+- hosts: utility
+  vars:
+    nodejs_npm_global_packages:
+      - name: jslint
+      - name: node-sass
+  roles:
+    - nodejs
+
+- hosts: ci-server
+  roles:
+    - jenkins
+
+- hosts: servers
+  vars:
+    manala_phantomjs_config:
+      - webdriver:          4444
+      - webdriver-logfile:  /var/log/phantomjs.log
+      - webdriver-loglevel: DEBUG
+  roles:
+    - role: phantomjs
 
 - hosts: application
   handlers:

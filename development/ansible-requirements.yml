@@ -1,0 +1,8 @@
+- src: geerlingguy.nodejs
+  name: nodejs
+
+- src: geerlingguy.jenkins
+  name: jenkins
+
+- src: manala.phantomjs
+  name: phantomjs

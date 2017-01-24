@@ -55,4 +55,6 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (split-window-right)
 (neotree-find-project-root)
+(global-linum-mode)
 
+(put 'set-goal-column 'disabled nil)
