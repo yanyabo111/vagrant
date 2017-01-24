@@ -58,3 +58,4 @@
 (global-linum-mode)
 
 (put 'set-goal-column 'disabled nil)
+
