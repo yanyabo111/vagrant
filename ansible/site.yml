@@ -50,11 +50,12 @@
     - vim
     - webserver
 
-- hosts: localhost
+- hosts: all
   remote_user: root
   vars:
     __users__:
-      root:
+      vagrant:
+        zsh_default_shell: Yes
         zsh_prompt_install: Yes
         zsh_prompt_name: pure
         zsh_prompt_download_url: https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh
